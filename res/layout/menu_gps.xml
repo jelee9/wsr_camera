@@ -1,0 +1,566 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- DOCK SETTINGS -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="#99999999"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/gps_menu_dock_settings"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#99FFFFFF" />
+
+            <!-- DOCK SETTINGS - USING BOUNDARY -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_using_boundary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_using_boundary_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/using_boundary_check"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+            </LinearLayout>
+
+            <!-- DOCK SETTINGS - LATITUDE/LONGITUDE -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/gps_menu_latitude"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/gps_menu_latitude_help"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/gps_menu_longitude"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/gps_menu_longitude_help"
+                            android:textSize="10sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="140dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/latitude"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/longitude"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical"
+                            android:inputType="number"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/set_current_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="false"
+                    android:text="@string/gps_menu_set_current_location"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- DOCK SETTINGS - BOUNDARY -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_boundary"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_boundary_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/boundary_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+            <!-- GPS SETTINGS -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:background="#99999999"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/gps_menu_gps_settings"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#99FFFFFF" />
+            <!-- GPS SETTINGS - MIN SPEED -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_min_speed"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_min_speed_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/min_speed_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="SmallSp" />
+                <!--
+      <EditText
+            android:id="@+id/min_speed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/min_speed_default"
+            android:inputType="number"
+            android:textSize="15sp"/>
+
+                -->
+            </LinearLayout>
+
+            <!-- GPS SETTINGS - MIN START DURATION -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_min_start_duration"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_min_start_duration_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/min_start_time_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="SmallSp" />
+                <!--
+      <EditText
+            android:id="@+id/min_start_time"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/min_start_time_default"
+            android:inputType="number"
+            android:textSize="15sp" />
+
+                -->
+            </LinearLayout>
+
+            <!-- GPS SETTINGS - MIN STOP DURATION -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_min_stop_duration"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/gps_menu_min_stop_duration_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/min_stop_time_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:spinnerMode="dropdown"
+                    tools:ignore="SmallSp" />
+                <!--
+      <EditText
+            android:id="@+id/min_stop_time"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:hint="@string/min_stop_time_default"
+            android:inputType="number"
+            android:textSize="15sp" />
+
+                -->
+            </LinearLayout>
+
+            <!-- WI-FI SETTINGS -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:background="#99999999"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/wifi_settings"
+                android:textSize="12sp"
+                tools:ignore="SmallSp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#99FFFFFF" />
+
+            <!-- WI-FI SETTINGS - AP NAME -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/ap_name"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/ap_name_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/ap_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- WI-FI SETTINGS - SERVER ADDRESS -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/server_address"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/server_address_help"
+                        android:textSize="10sp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/server_address1"
+                    android:layout_width="45dp"
+                    android:layout_height="fill_parent"
+                    android:digits="0123456789."
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:text="@string/server_address_devide"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/server_address2"
+                    android:layout_width="45dp"
+                    android:layout_height="fill_parent"
+                    android:digits="0123456789."
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:text="@string/server_address_devide"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/server_address3"
+                    android:layout_width="45dp"
+                    android:layout_height="fill_parent"
+                    android:digits="0123456789."
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom"
+                    android:text="@string/server_address_devide"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/server_address4"
+                    android:layout_width="45dp"
+                    android:layout_height="fill_parent"
+                    android:digits="0123456789."
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

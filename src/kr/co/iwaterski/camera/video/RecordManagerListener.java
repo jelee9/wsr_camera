@@ -1,0 +1,21 @@
+package kr.co.iwaterski.camera.video;
+
+public interface RecordManagerListener
+{
+	public enum VALUE{
+		STATE_AUTO_START,
+		STATE_AUTO_STOP,
+
+		RESULT_SUCCESS_START,
+		RESULT_SUCCESS_STOP,
+		RESULT_SUCCESS_AUTO_ENABLE,
+		RESULT_SUCCESS_AUTO_DISABLE,
+
+		RESULT_FAIL_START,
+		RESULT_FAIL_STOP,
+		RESULT_FAIL_AUTO_ENABLE,
+		RESULT_FAIL_AUTO_DISABLE;
+	};
+	
+	void handler(VALUE value);
+}
